@@ -1,6 +1,6 @@
 package ho.jong.joo.hitstory;
 
-import ho.jong.joo.hitstory.dao.LocationInfoDAO;
+import ho.jong.joo.hitstory.vo.LocationInfoVO;
 
 import java.util.List;
 
@@ -12,11 +12,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-public class MyLocationAdapter extends ArrayAdapter<LocationInfoDAO>{
+public class MyLocationAdapter extends ArrayAdapter<LocationInfoVO>{
 	Context context;
-	List<LocationInfoDAO> list;
+	List<LocationInfoVO> list;
 	
-	public MyLocationAdapter(Context context,  int textViewResourceId, List<LocationInfoDAO> list) {
+	public MyLocationAdapter(Context context,  int textViewResourceId, List<LocationInfoVO> list) {
 		super(context, textViewResourceId, list);
 		this.context = context;
 		this.list = list;
@@ -34,11 +34,20 @@ public class MyLocationAdapter extends ArrayAdapter<LocationInfoDAO>{
 			view = inflater.inflate(R.layout.location_list, parent , false);
 		}
 		 
-		LocationInfoDAO locDao =  getItem(position);
-		Log.i("MyDebug", ""+locDao);
-		TextView tv = (TextView) view.findViewById(R.id.loc_title);
+		LocationInfoVO locVo =  getItem(position);
+		Log.i("test", ""+locVo);
 		
-		tv.setText(locDao.getTitle());
+		TextView title = (TextView) view.findViewById(R.id.location_title);
+		TextView addr1  =(TextView) view.findViewById(R.id.location_addr1);
+		TextView sigungucode =(TextView) view.findViewById(R.id.location_sigungucode);
+		TextView contenttypeid =(TextView) view.findViewById(R.id.location_contenttypeid);
+		
+		title.setText(locVo.getTitle());
+		addr1.setText(locVo.getAddr1());
+		sigungucode.setText( String.valueOf(locVo.getSigungucode()));
+		contenttypeid.setText( String.valueOf(locVo.getContenttypeid()));
+//		TextView tv = (TextView) view.findViewById(R.id.loc_title);
+//		tv.setText(locDao.getTitle());
 		
 		return view;
 	}
