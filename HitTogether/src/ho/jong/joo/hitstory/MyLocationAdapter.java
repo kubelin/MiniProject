@@ -41,11 +41,15 @@ public class MyLocationAdapter extends ArrayAdapter<LocationInfoVO>{
 		TextView addr1  =(TextView) view.findViewById(R.id.location_addr1);
 		TextView sigungucode =(TextView) view.findViewById(R.id.location_sigungucode);
 		TextView contenttypeid =(TextView) view.findViewById(R.id.location_contenttypeid);
+		TextView imageUrl = (TextView)view.findViewById(R.id.imageUrl);
+		TextView tel = (TextView) view.findViewById(R.id.location_tel);
 		
 		title.setText(locVo.getTitle());
 		addr1.setText(locVo.getAddr1());
 		sigungucode.setText( String.valueOf(locVo.getSigungucode()));
 		contenttypeid.setText( String.valueOf(locVo.getContenttypeid()));
+		imageUrl.setText( locVo.getFirstimage() );
+		tel.setText( String.valueOf(locVo.getTel()));
 //		TextView tv = (TextView) view.findViewById(R.id.loc_title);
 //		tv.setText(locDao.getTitle());
 		

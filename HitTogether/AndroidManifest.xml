@@ -23,10 +23,13 @@
             </intent-filter>
         </activity>
         <activity 
-			android:name="ho.jong.joo.hitstory.SearchLocationOwn"
+			android:name="ho.jong.joo.hitstory.SearchLocationOwnActivity"
 			>
         </activity>
-        
+           <activity 
+			android:name="ho.jong.joo.hitstory.LocationDetailActivity"
+			>
+        </activity>
     </application>
     
 </manifest>

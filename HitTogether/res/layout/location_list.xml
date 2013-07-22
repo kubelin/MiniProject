@@ -35,7 +35,23 @@
             android:layout_height="wrap_content"
             android:text="Small Text"
             android:textAppearance="?android:attr/textAppearanceSmall" />
-
+		
+         <TextView
+            android:id="@+id/location_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+        
+         <TextView
+            android:id="@+id/imageUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+         
     </LinearLayout>
 
 </LinearLayout>

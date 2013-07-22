@@ -23,8 +23,7 @@ public class Main extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		searchBtn = (Button) findViewById(R.id.SearchBtn);
-		addActionMap("1", SearchLocationOwn.class);
-		
+		addActionMap("1", SearchLocationOwnActivity.class);
 	}
 	
 	public void goAction(View view){
